@@ -16,8 +16,8 @@ class Student < ActiveRecord::Base
   
   def self.search(name)
     if name.present?
-    self.all.select do |student|
-      student.name == name
+    self.all.map do |student|
+      student.name.downcase == name.downcase
     end 
     else 
     self.all
