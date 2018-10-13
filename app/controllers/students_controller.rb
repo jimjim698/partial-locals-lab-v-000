@@ -21,7 +21,7 @@ class StudentsController < ApplicationController
   end
 
   def index
-    raise params.inspect
+    
     @students = Student.search(params[:name])
   end
 
