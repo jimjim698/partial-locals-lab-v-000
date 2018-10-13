@@ -18,8 +18,9 @@ class Student < ActiveRecord::Base
     if name.present?
     Student.all.collect do |student|
       student.name == name
-      
-    @student = Student.find_by_name(student)
+    else 
+    Student.all
+  end 
   end 
   
 end
