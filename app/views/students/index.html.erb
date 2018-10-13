@@ -3,4 +3,6 @@
 <%=submit_tag 'Search Student'%>
 <%end%>
 
-<%
+<%@students.each do |student|%>
+<%=student.name%>
+<%end%>
