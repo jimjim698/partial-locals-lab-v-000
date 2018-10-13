@@ -16,7 +16,7 @@ class Student < ActiveRecord::Base
   
   def self.search(name)
     if name.present?
-    self.all.collect do |student|
+    self.all.select do |student|
       student.name == name
     end 
     else 
