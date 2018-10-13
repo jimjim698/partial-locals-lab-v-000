@@ -16,11 +16,11 @@ class Student < ActiveRecord::Base
   
   def self.search(name)
     if name.present?
-    Student.all.collect do |student|
+    self.all.collect do |student|
       student.name == name
     end 
     else 
-    Student.all
+    self.all
 end 
   end 
   
