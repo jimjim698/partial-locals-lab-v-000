@@ -15,8 +15,9 @@ class Student < ActiveRecord::Base
   has_many :classrooms, through: :classroom_students
   
   def self.search(name)
+    if name.present?
     Student.all.collect do |student|
-      student.name = name
+      student.name == name
       
     @student = Student.find_by_name(student)
   end 
